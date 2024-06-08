@@ -44,16 +44,26 @@ The Tractus Backend project is a comprehensive backend API solution designed to 
 
 ### API Endpoints
 
-- **User Management**
-  - `POST /api/users/register` - Register a new user.
-  - `POST /api/users/login` - Authenticate a user.
+#### ControlPlaneController
+- **Discovery Endpoints**
+  - `POST /discoveryEndpoint/Endpoints` : Retrieve discovery endpoints.
+  - `POST /discoveryEndpoint/delete` : Delete discovery endpoints by resource ID.
+  - `POST /discoveryEndpoint/add` : Add a new discovery endpoint.
 
-- **Entity Management**
-  - `GET /api/entities` - List all entities.
-  - `POST /api/entities` - Create a new entity.
-  - `GET /api/entities/{id}` - Get entity details.
-  - `PUT /api/entities/{id}` - Update an entity.
-  - `DELETE /api/entities/{id}` - Delete an entity.
+- **Digital Twin KIT APIs**
+  - `GET /discoveryEndpoint/lookup/shells/{AssetIds}` : Retrieve AAS IDs for given asset IDs.
+  - `POST /discoveryEndpoint/Connectors/discovery` : Retrieve available company connectors.
+
+- **Connector KIT APIs**
+  - `POST /discoveryEndpoint/catalog/request` : Get catalog details.
+  - `POST /discoveryEndpoint/policydefinitions` : Create policy definitions.
+  - `POST /discoveryEndpoint/contractdefinitions` : Create contract definitions.
+  - `POST /discoveryEndpoint/contractnegotiations` : Create contract negotiations.
+
+#### DataPlaneController
+- **Product Management**
+  - `GET /pcf/{productId}` : Retrieve product information by product ID.
+  - `PUT /pcf/{productId}` : Update product information by product ID.
 
 ## Contributing
 1. Fork the repository.
@@ -67,5 +77,5 @@ The Tractus Backend project is a comprehensive backend API solution designed to 
 
 ## Contact
 **Melvin Abraham**  
-[LinkedIn]([https://www.linkedin.com/in/melvinabjohn](https://www.linkedin.com/in/melvinjohnabraham/))  
-[Email](mailto:melvinabjohn@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/melvinjohnabraham/)
+- [Email](mailto:melvinabjohn@gmail.com)
